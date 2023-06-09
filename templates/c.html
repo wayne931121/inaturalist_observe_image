@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>input{font-size: 30px;}</style>
+</head>
+<body>
+<form method="post" action="javascript:void(0);" onsubmit="uploadImage();">
+    <input type="file" id="img" >
+    <input type="submit" id="submit" value="upload">
+</form>
+<h1 id="text">請選擇檔案</h1>
+<script>
+let ajax;
+const text = document.getElementById("text");
+
+function myProgressHandler(event) {
+  var p = Math.floor(event.loaded/event.total*100);
+  if(p<100){text.innerHTML = "上傳中"+p+"%";}else{text.innerHTML = "上傳中"+p+"%，處理辨識中";}
+}
+
+function myOnLoadHandler(event) {
+  res = ajax.response;
+  text.innerHTML = "辨識為:"+res["物種分類"]+"，準確率:"+res["準確率"]+"%。<br>可能物種:"+res["可能物種"]+"。";
+}
+
+function uploadImage(){
+ajax = new XMLHttpRequest;
+var file = document.getElementById("img").files[0];
+var formData = new FormData;
+formData.append('imagefile', file);
+ajax.upload.addEventListener("progress", myProgressHandler, false);
+ajax.addEventListener('load', myOnLoadHandler, false);
+ajax.timeout = 60000;
+ajax.responseType = "json"
+ajax.open('POST', '/observe', true);
+ajax.send(formData);
+}
+</script>
+</body>
