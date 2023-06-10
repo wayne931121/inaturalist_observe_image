@@ -6,9 +6,9 @@
 [取得個人認證資訊](https://drive.google.com/file/d/1wO8a6X6ZAdeABOSLM298VO0HGr9LFNoo/view?usp=sharing)
 ```cmd
 C:\> python iNaturalist-Authorization.py
-請輸入帳號(please input account): ???
-請輸入密碼(please input password): ???
-Authorization: ???
+請輸入帳號(please input account): input-???
+請輸入密碼(please input password): input-???
+Authorization: output-???
 ```
 
 ## 提醒:<br>
