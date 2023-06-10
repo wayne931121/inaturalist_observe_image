@@ -1,3 +1,5 @@
+# 這份文件已於2023/06/10 20:50失效(This document has become invalid on 2023/06/10 20:50)
+
 # inaturalist_observe_image
 將圖片進行上傳，你將會知道他是什麼品種(需要個人認證資料)。 Upload Image RAW, You Can Know What Species Is.(User Auth Data Is Required)<br><br>
 
