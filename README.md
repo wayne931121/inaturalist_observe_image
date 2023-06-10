@@ -5,7 +5,7 @@
 [操作範例](https://drive.google.com/file/d/1HNQ4vhQ4oRoXTUrX3vZus1_WxbURRUAS/view?usp=sharing) <br>
 [取得個人認證資訊](https://drive.google.com/file/d/1wO8a6X6ZAdeABOSLM298VO0HGr9LFNoo/view?usp=sharing)
 ```cmd
-C:\> python iNaturalist-Authorization-爬蟲.py
+C:\> python iNaturalist-Authorization.py
 請輸入帳號(please input account): ???
 請輸入密碼(please input password): ???
 Authorization: ???
